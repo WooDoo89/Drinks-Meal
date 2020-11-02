@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "92322502322",
+    "firebase_url": "https://snacks-beer.firebaseio.com",
+    "project_id": "snacks-beer",
+    "storage_bucket": "snacks-beer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92322502322:android:555b12620cd9fc795c5bab",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92322502322-vg7cr4tt17heorl6l2fgkubesnvqe3v4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr5BNPt4PEk2J0DDr3HoDFDd-8b5wffTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92322502322-vg7cr4tt17heorl6l2fgkubesnvqe3v4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92322502322:android:a44b6bc8a73d2c0f5c5bab",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92322502322-vg7cr4tt17heorl6l2fgkubesnvqe3v4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr5BNPt4PEk2J0DDr3HoDFDd-8b5wffTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92322502322-vg7cr4tt17heorl6l2fgkubesnvqe3v4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
