@@ -14,6 +14,10 @@
             android:allowEmbedded="true">
         </activity>
         <activity
+            android:name=".RegisterActivity"
+            android:allowEmbedded="true">
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:label="Main"
             android:windowSoftInputMode="adjustResize">

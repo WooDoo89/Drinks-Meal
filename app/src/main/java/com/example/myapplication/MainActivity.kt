@@ -10,19 +10,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val login: Button = findViewById<Button>(R.id.login)
         login.setOnClickListener {
-            val i = Intent(this@MainActivity, LoginActivity::class.java)
+            val i = Intent(applicationContext, LoginActivity::class.java)
+            startActivity(i)
+        }
+
+        val register: Button = findViewById<Button>(R.id.register)
+        register.setOnClickListener {
+            val i = Intent(applicationContext, RegisterActivity::class.java)
             startActivity(i)
         }
     }
-    fun test(){
-        val test: Button = findViewById<Button>(R.id.test)
-        test.setOnClickListener {
-            setContentView(R.layout.activity_main)
-        }
-    }
-
 
 
 
