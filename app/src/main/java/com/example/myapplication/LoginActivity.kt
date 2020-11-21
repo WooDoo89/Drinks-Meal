@@ -48,7 +48,9 @@ class LoginActivity : AppCompatActivity() {
             }
             if(password.text.toString() != "" && userLogin.text.toString() != ""){
                 notification.text = "You have been logged in!"
-                Thread.sleep(1000)
+                Thread.sleep(500)
+                val i = Intent(applicationContext, MainMenuActivity::class.java)
+                startActivity(i)
             }
             else{
                 notification.text = "Please correct your data"
