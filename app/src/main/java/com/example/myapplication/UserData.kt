@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 
+
 class UserData {
     var Name: String = ""
     var Surname: String = ""
@@ -11,7 +12,7 @@ class UserData {
     var Email: String = ""
     var Phone: String = ""
     companion object{
-        lateinit var currentUser: String
+        lateinit var currentUser: UserData
     }
 
     fun get(): ArrayList<UserData>{
@@ -33,17 +34,26 @@ class UserData {
             }
         return BD
     }
+    fun updateUser(){
+        
+    }
     fun getUser(username: String): UserData{
-        var BD = UserData()
+        val BD = UserData()
         val db = FirebaseFirestore.getInstance()
-        val TAG = "CHECK"
+        val TAG = "-------------------------------------------------------"
         db.collection("User")
                 .whereEqualTo("Username", username)
                 .get()
                 .addOnSuccessListener { documents ->
                     for (document in documents) {
                         Log.d(TAG, "${document.id} => ${document.data}")
-                        BD = document.toObject(UserData::class.java)
+                        BD.Name = document.toObject(UserData::class.java).Name
+                        BD.Surname = document.toObject(UserData::class.java).Surname
+                        BD.Phone = document.toObject(UserData::class.java).Phone
+                        BD.Email = document.toObject(UserData::class.java).Email
+                        BD.Password = document.toObject(UserData::class.java).Password
+                        BD.Username = document.toObject(UserData::class.java).Username
+                        break;
                     }
                 }
                 .addOnFailureListener { exception ->
@@ -51,10 +61,10 @@ class UserData {
                 }
         return BD
     }
-    fun setCurrentUser(user:String){
+    fun setCurrentUser(user:UserData){
         currentUser = user
     }
-    fun getCurrentUser(): String {
+    fun getCurrentUser(): UserData {
         return currentUser
     }
 }

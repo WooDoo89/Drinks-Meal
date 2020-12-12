@@ -48,8 +48,8 @@ class LoginActivity : AppCompatActivity() {
             }
             if(password.text.toString() != "" && userLogin.text.toString() != ""){
                 notification.text = "You have been logged in!"
-                helping.setCurrentUser(userLogin.text.toString())
-                Thread.sleep(500)
+                var obj = loginUser.checkIfUsernameExists2(userLogin.text.toString(), allUsers)
+                helping.setCurrentUser(obj)
                 val i = Intent(applicationContext, MainMenuActivity::class.java)
                 startActivity(i)
             }

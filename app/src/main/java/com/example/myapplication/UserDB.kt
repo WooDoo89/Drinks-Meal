@@ -4,6 +4,7 @@ import android.telephony.PhoneNumberUtils
 import android.util.Log
 import android.widget.EditText
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.auth.User
 import java.security.MessageDigest
 
 
@@ -23,6 +24,13 @@ class UserDB {
                 return false
         }
         return true
+    }
+    fun checkIfUsernameExists2(usernameInput: String, allUsers: ArrayList<UserData>) : UserData {
+        for (item in allUsers) {
+            if (item.Username == usernameInput)
+                return item
+        }
+        return allUsers[0]
     }
     fun checkIfPasswordExists(password: String, allUsers: ArrayList<UserData>) : Boolean{
         for(item in allUsers){

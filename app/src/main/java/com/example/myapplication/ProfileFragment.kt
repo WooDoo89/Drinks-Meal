@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -16,28 +17,29 @@ class ProfileFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_layout_profile, container, false)
 
+
         var user = UserData()
+        var mainUser = user.getCurrentUser()
+
         val textView: TextView = view.findViewById(R.id.textViewProfile)
+        textView.text = mainUser.Name + " " + mainUser.Surname
 
-        user = user.getUser(user.getCurrentUser())
+        val nameView: TextView = view.findViewById(R.id.userName)
+        nameView.text = mainUser.Name
 
-        textView.text = user.Username
+        val surnameView: TextView = view.findViewById(R.id.userSurname)
+        surnameView.text = mainUser.Surname
 
-        val nameView: EditText = view.findViewById(R.id.nameInputOutput)
-        nameView.setText(user.Name)
+        val phoneView: TextView = view.findViewById(R.id.userPhone)
+        phoneView.text = mainUser.Phone
 
-        val surnameView: EditText = view.findViewById(R.id.surnameInputOutput)
-        surnameView.setText(user.Surname)
+        val emailView: TextView = view.findViewById(R.id.userEmail)
+        emailView.text = mainUser.Email
 
-        val editText :EditText = view.findViewById(R.id.nameInputOutput)
-        disableEditText(editText)
+        val button:Button = view.findViewById(R.id.update)
+        button.setOnClickListener {
+
+        }
         return view
-    }
-    private fun disableEditText(editText: EditText) {
-        editText.isFocusable = false;
-        editText.isEnabled = false;
-        editText.isCursorVisible = false;
-        editText.keyListener = null;
-        editText.setBackgroundColor(Color.TRANSPARENT);
     }
 }

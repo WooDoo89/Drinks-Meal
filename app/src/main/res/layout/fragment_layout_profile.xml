@@ -17,63 +17,196 @@
         android:text="Profile"
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:textStyle="normal"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.419"
-        tools:layout_editor_absoluteX="162dp" />
+        tools:layout_editor_absoluteX="162dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
 
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name:"
+            android:text="First Name:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15dp"
             android:layout_marginLeft="10dp"
             />
 
-        <EditText
-            android:id="@+id/nameInputOutput"
-            android:layout_marginLeft="10dp"
+        <TextView
+            android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:ems="15"
-            android:inputType="text"
-            android:maxLength="20"
-            android:maxLines="1"
-            android:textIsSelectable="false"
-            android:focusable="false"
-            android:focusableInTouchMode="false"/>
+            android:text="Name"
+            android:layout_marginLeft="30dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
 
         <TextView
             android:id="@+id/surname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Surname:"
+            android:text="Last Name:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15dp"
             android:layout_marginLeft="10dp"
             />
 
-        <EditText
-            android:id="@+id/surnameInputOutput"
-            android:layout_marginLeft="10dp"
+        <TextView
+            android:id="@+id/userSurname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:ems="15"
-            android:inputType="text"
-            android:maxLength="20"
-            android:maxLines="1"
-            android:textIsSelectable="false"
-            android:focusable="false"
-            android:focusableInTouchMode="false"/>
+            android:text="Surname"
+            android:layout_marginLeft="30dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <TextView
+            android:id="@+id/phonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/userPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:layout_marginLeft="30dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <TextView
+            android:id="@+id/emailu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginLeft="30dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:text="Update Data"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textSize="15dp"
+            android:shape="oval"
+            />
+    </RelativeLayout>
 </LinearLayout>
