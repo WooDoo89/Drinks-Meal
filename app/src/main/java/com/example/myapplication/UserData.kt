@@ -10,6 +10,9 @@ class UserData {
     var Password: String = ""
     var Email: String = ""
     var Phone: String = ""
+    companion object{
+        lateinit var currentUser: String
+    }
 
     fun get(): ArrayList<UserData>{
 
@@ -29,5 +32,11 @@ class UserData {
                 Log.d(TAG, "Error getting documents: ", exception)
             }
         return BD
+    }
+    fun setCurrentUser(user:String){
+        currentUser = user
+    }
+    fun getCurrentUser(): String {
+        return currentUser
     }
 }

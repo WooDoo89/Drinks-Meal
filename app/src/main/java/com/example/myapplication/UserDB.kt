@@ -1,15 +1,32 @@
 package com.example.myapplication
 
+import android.telephony.PhoneNumberUtils
 import android.util.Log
+import android.widget.EditText
 import com.google.firebase.firestore.FirebaseFirestore
 import java.security.MessageDigest
 
 
 class UserDB {
-
+    fun checkIfEmailIsValidate(emailInput: String) : Boolean{
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()
+    }
+    fun checkIfPasswordIsValidate(passwordInput: String, passwordConfirmInput: String) : Boolean{
+        return passwordInput == passwordConfirmInput
+    }
+    fun checkIfPhoneIsValidate(phoneInput: String) : Boolean{
+        return PhoneNumberUtils.isGlobalPhoneNumber(phoneInput)
+    }
     fun checkIfUsernameExists(usernameInput: String, allUsers: ArrayList<UserData>) : Boolean {
         for (item in allUsers) {
             if (item.Username == usernameInput)
+                return false
+        }
+        return true
+    }
+    fun checkIfPasswordExists(password: String, allUsers: ArrayList<UserData>) : Boolean{
+        for(item in allUsers){
+            if(item.Password == hash(password))
                 return false
         }
         return true
@@ -28,13 +45,7 @@ class UserDB {
         }
         return true
     }
-    fun checkIfPasswordExists(password: String, allUsers: ArrayList<UserData>) : Boolean{
-        for(item in allUsers){
-            if(item.Password == hash(password))
-                return false
-        }
-        return true
-    }
+
     fun registration(usernameInput: String, emailInput: String, phoneInput: String, nameInput: String, surnameInput: String, passwordInput: String) {
         val db = FirebaseFirestore.getInstance()
         val tag = "User Adding"

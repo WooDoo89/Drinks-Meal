@@ -8,7 +8,10 @@ import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.EditText
+import android.widget.TextView
 import com.example.myapplication.ui.main.SectionsPagerAdapter
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MainMenuActivity : AppCompatActivity() {
 
@@ -23,5 +26,6 @@ class MainMenuActivity : AppCompatActivity() {
 
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+
     }
 }

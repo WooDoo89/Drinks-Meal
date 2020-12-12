@@ -50,7 +50,6 @@ class BeerListAdapter(private val context: Context,
         tvIBU.text = beer.IBU
         tvColor.text = beer.Color
 
-
         return rowView
     }
 }

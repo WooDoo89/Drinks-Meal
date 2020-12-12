@@ -36,17 +36,17 @@ class RegisterActivity : AppCompatActivity() {
 
             val notification = findViewById<TextView>(R.id.notification)
             var registerUser = UserDB()
-            if(!checkIfEmailIsValidate(email.text.toString())){
+            if(!registerUser.checkIfEmailIsValidate(email.text.toString())){
                 email.error = "Incorrect Email"
                 nullIfFalse(password, passwordConfirm)
                 email.text = null
             }
-            if(!checkIfPasswordIsValidate(password.text.toString(), passwordConfirm.text.toString())){
+            if(!registerUser.checkIfPasswordIsValidate(password.text.toString(), passwordConfirm.text.toString())){
                 password.error = "Passwords does not match"
                 passwordConfirm.error = "Passwords does not match"
                 nullIfFalse(password, passwordConfirm)
             }
-            if(!checkIfPhoneIsValidate(phone.text.toString())){
+            if(!registerUser.checkIfPhoneIsValidate(phone.text.toString())){
                 phone.error = "Incorrect Phone Number"
                 nullIfFalse(password, passwordConfirm)
                 phone.text = null
@@ -116,14 +116,5 @@ class RegisterActivity : AppCompatActivity() {
     private fun nullIfFalse(password: EditText, passwordConfirm: EditText){
         password.text = null
         passwordConfirm.text = null
-    }
-    private fun checkIfEmailIsValidate(emailInput: String) : Boolean{
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()
-    }
-    private fun checkIfPasswordIsValidate(passwordInput: String, passwordConfirmInput: String) : Boolean{
-        return passwordInput == passwordConfirmInput
-    }
-    private fun checkIfPhoneIsValidate(phoneInput: String) : Boolean{
-        return PhoneNumberUtils.isGlobalPhoneNumber(phoneInput)
     }
 }
