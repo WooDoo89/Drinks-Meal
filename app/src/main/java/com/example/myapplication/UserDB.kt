@@ -45,7 +45,6 @@ class UserDB {
         }
         return true
     }
-
     fun registration(usernameInput: String, emailInput: String, phoneInput: String, nameInput: String, surnameInput: String, passwordInput: String) {
         val db = FirebaseFirestore.getInstance()
         val tag = "User Adding"

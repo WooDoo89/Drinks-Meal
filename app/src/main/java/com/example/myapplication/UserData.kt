@@ -33,6 +33,24 @@ class UserData {
             }
         return BD
     }
+    fun getUser(username: String): UserData{
+        var BD = UserData()
+        val db = FirebaseFirestore.getInstance()
+        val TAG = "CHECK"
+        db.collection("User")
+                .whereEqualTo("Username", username)
+                .get()
+                .addOnSuccessListener { documents ->
+                    for (document in documents) {
+                        Log.d(TAG, "${document.id} => ${document.data}")
+                        BD = document.toObject(UserData::class.java)
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.w(TAG, "Error getting documents: ", exception)
+                }
+        return BD
+    }
     fun setCurrentUser(user:String){
         currentUser = user
     }
