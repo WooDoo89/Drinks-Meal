@@ -14,9 +14,39 @@ class DrinkSearchFragment : Fragment() {
 
         val beerBut: Button = view.findViewById(R.id.bearBut)
         beerBut.setOnClickListener {
-            val i = Intent(activity?.applicationContext, DrinksViewActivity::class.java)
+            val i = Intent(activity?.applicationContext, BearViewActivity::class.java)
             startActivity(i)
         }
+
+        val brandyBut: Button = view.findViewById(R.id.brandyBut)
+        brandyBut.setOnClickListener {
+            val i = Intent(activity?.applicationContext, BrandyViewActivity::class.java)
+            startActivity(i)
+        }
+
+        val rumBut: Button = view.findViewById(R.id.rumBut)
+        rumBut.setOnClickListener {
+            val i = Intent(activity?.applicationContext, RumViewActivity::class.java)
+            startActivity(i)
+        }
+
+        val tequilaBut: Button = view.findViewById(R.id.tequilaBut)
+        tequilaBut.setOnClickListener {
+            val i = Intent(activity?.applicationContext, TequilaViewActivity::class.java)
+            startActivity(i)
+        }
+
+        val whiskeyBut: Button = view.findViewById(R.id.whiskeyBut)
+        whiskeyBut.setOnClickListener {
+            val i = Intent(activity?.applicationContext, WhiskeyViewActivity::class.java)
+            startActivity(i)
+        }
+        //This is obly for view so that we do not need all data view
+//        val allBut: Button = view.findViewById(R.id.allBut)
+//        allBut.setOnClickListener {
+//            val i = Intent(activity?.applicationContext, AllDrinksViewActivity::class.java)
+//            startActivity(i)
+//        }
         return view
     }
 }

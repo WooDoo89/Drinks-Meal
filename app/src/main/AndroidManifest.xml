@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".DrinksViewActivity"></activity>
+        <activity android:name=".WhiskeyViewActivity"></activity>
+        <activity android:name=".TequilaViewActivity" />
+        <activity android:name=".RumViewActivity" />
+        <activity android:name=".BrandyViewActivity" />
+        <activity android:name=".BearViewActivity" />
         <activity
             android:name=".MainMenuActivity"
             android:label="@string/title_activity_main_menu"

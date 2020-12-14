@@ -46,9 +46,9 @@ class BeerListAdapter(private val context: Context,
         tvType.text = beer.Type
         tvStyleDescription.text = beer.StyleDescription
         tvDescription.text = beer.Description
-        tvABV.text = beer.ABV.toString()
-        tvIBU.text = beer.IBU.toString()
-        tvColor.text = beer.Color.toString()
+        tvABV.text = beer.ABV.toString() + " %"
+        tvIBU.text = beer.IBU.toString() + " Bitterness"
+        tvColor.text = beer.Color.toString() + " SRM"
 
         return rowView
     }

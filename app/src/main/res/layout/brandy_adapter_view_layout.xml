@@ -8,7 +8,7 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="160dp"
         android:layout_weight="66.6"
         android:gravity="center"
         android:text="TextView1"
@@ -24,19 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="33.3">
 
-        <TextView
-            android:gravity="center"
-            android:text="TextView2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:id="@+id/textView2"/>
-
-        <TextView
-            android:gravity="center"
-            android:text="TextView3"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:id="@+id/textView3" />
         <TextView
             android:gravity="center"
             android:text="TextView4"
@@ -55,11 +42,5 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:id="@+id/textView6" />
-        <TextView
-            android:gravity="center"
-            android:text="TextView7"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:id="@+id/textView7" />
     </LinearLayout>
 </LinearLayout>

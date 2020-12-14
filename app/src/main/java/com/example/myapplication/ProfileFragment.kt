@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -36,9 +37,10 @@ class ProfileFragment : Fragment() {
         val emailView: TextView = view.findViewById(R.id.userEmail)
         emailView.text = mainUser.Email
 
-//        val button:Button = view.findViewById(R.id.update)
-//        button.setOnClickListener {
-//
+//        val updateBut: Button = view.findViewById(R.id.update)
+//        updateBut.setOnClickListener {
+//            val i = Intent(activity?.applicationContext, WhiskeyViewActivity::class.java)
+//            startActivity(i)
 //        }
         return view
     }

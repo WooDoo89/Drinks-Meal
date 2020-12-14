@@ -6,12 +6,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.ListView
 
-class DrinksViewActivity : AppCompatActivity() {
+class TequilaViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_drinks_view)
+        setContentView(R.layout.activity_tequila_view)
 
-        var beer = BeerData()
+        var beer = TequilaData()
         var beerList = beer.get()
 
         //Thread.sleep(5000)
@@ -19,12 +19,8 @@ class DrinksViewActivity : AppCompatActivity() {
         val mListView = findViewById<View>(R.id.listView) as ListView
         val but1: Button = findViewById<Button>(R.id.button)
         but1.setOnClickListener {
-            val beerListAdapter = BeerListAdapter(this, beerList)
+            val beerListAdapter = TequilaListAdapter(this, beerList)
             mListView.adapter = beerListAdapter
         }
-//        val beerListAdapter = BeerListAdapter(this, beerList)
-//        mListView.adapter = beerListAdapter
-
-        //Thread.sleep(5000)
     }
 }
