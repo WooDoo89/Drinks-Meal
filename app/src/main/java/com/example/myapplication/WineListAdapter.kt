@@ -42,7 +42,7 @@ class WineListAdapter(private val context: Context,
 
         tvStyle.text = wine.Style
         tvType.text = wine.Type
-        tvABV.text = wine.ABV
+        tvABV.text = wine.ABV.toString()
         tvDescription.text = wine.Description
 
         return rowView

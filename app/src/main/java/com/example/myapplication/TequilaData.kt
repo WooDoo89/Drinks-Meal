@@ -3,24 +3,23 @@ package com.example.myapplication
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 
-class WineData {
-    var Style: String = ""
+class TequilaData {
     var Type: String = ""
     var Description: String = ""
     var ABV: Int = 0
 
-    fun get(): ArrayList<WineData>{
+    fun get(): ArrayList<TequilaData>{
 
-        var BD = ArrayList<WineData>()
+        var BD = ArrayList<TequilaData>()
         val db = FirebaseFirestore.getInstance()
         val TAG = "CHECK"
 
-        db.collection("Wine")
+        db.collection("Tequila")
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
                     Log.d(TAG, "${document.id} => ${document.data}")
-                    BD.add(document.toObject(WineData::class.java))
+                    BD.add(document.toObject(TequilaData::class.java))
                 }
             }
             .addOnFailureListener { exception ->

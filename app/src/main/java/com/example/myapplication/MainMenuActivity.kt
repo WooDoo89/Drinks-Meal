@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -12,6 +13,9 @@ import android.widget.EditText
 import android.widget.TextView
 import com.example.myapplication.ui.main.SectionsPagerAdapter
 import com.google.firebase.firestore.FirebaseFirestore
+import android.view.View
+import android.widget.Button
+import android.widget.ListView
 
 class MainMenuActivity : AppCompatActivity() {
 
@@ -26,6 +30,16 @@ class MainMenuActivity : AppCompatActivity() {
 
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+
+        //while(true){
+
+//            if(beer.setUp()){
+//                val mListView = findViewById<View>(R.id.listView) as ListView
+//                val beerListAdapter = BeerListAdapter(this, beerList)
+//                mListView.adapter = beerListAdapter
+//            }
+
+        //}
 
     }
 }

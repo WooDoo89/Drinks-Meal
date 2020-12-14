@@ -1,20 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainMenuActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewProfile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
         android:text="Drink Search"
-        android:textStyle="normal"
-        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.419"
-        tools:layout_editor_absoluteX="162dp" />
-</RelativeLayout>
+        tools:layout_editor_absoluteX="162dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <Button
+            android:id="@+id/bearBut"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:text="Beer"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textSize="15dp"
+            android:shape="oval"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <Button
+            android:id="@+id/brandyBut"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:text="Brandy"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textSize="15dp"
+            android:shape="oval"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <Button
+            android:id="@+id/rumBut"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:text="Rum"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textSize="15dp"
+            android:shape="oval"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <Button
+            android:id="@+id/tequilaBut"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:text="Tequila"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textSize="15dp"
+            android:shape="oval"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <Button
+            android:id="@+id/whiskeyBut"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:text="Whiskey"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textSize="15dp"
+            android:shape="oval"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <Button
+            android:id="@+id/wineBut"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:text="Wine"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textSize="15dp"
+            android:shape="oval"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="clip_vertical">
+
+        <Button
+            android:id="@+id/allBut"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:text="All Drinks"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textSize="15dp"
+            android:shape="oval"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+</LinearLayout>

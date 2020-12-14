@@ -36,10 +36,10 @@ class ProfileFragment : Fragment() {
         val emailView: TextView = view.findViewById(R.id.userEmail)
         emailView.text = mainUser.Email
 
-        val button:Button = view.findViewById(R.id.update)
-        button.setOnClickListener {
-
-        }
+//        val button:Button = view.findViewById(R.id.update)
+//        button.setOnClickListener {
+//
+//        }
         return view
     }
 }
