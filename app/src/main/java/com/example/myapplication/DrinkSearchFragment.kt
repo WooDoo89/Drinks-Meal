@@ -12,11 +12,11 @@ class DrinkSearchFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_layout_drink_search, container, false)
 
-//        val beerBut: Button = view.findViewById(R.id.login)
-//        beerBut.setOnClickListener {
-//            val i = Intent(activity?.applicationContext, DrinksViewActivity::class.java)
-//            startActivity(i)
-//        }
+        val beerBut: Button = view.findViewById(R.id.bearBut)
+        beerBut.setOnClickListener {
+            val i = Intent(activity?.applicationContext, DrinksViewActivity::class.java)
+            startActivity(i)
+        }
         return view
     }
 }

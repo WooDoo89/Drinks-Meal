@@ -11,9 +11,6 @@ class BeerData {
     var ABV: Int = 0
     var IBU: Int = 0
     var Color: Int = 0
-    companion object{
-        var setUp: Boolean = false
-    }
     fun get(): ArrayList<BeerData>{
 
         var BD = ArrayList<BeerData>()
@@ -32,13 +29,5 @@ class BeerData {
                 Log.d(TAG, "Error getting documents: ", exception)
             }
         return BD
-    }
-
-    fun changeStatus(){
-        setUp = true
-    }
-
-    fun setUp() : Boolean{
-        return setUp
     }
 }
