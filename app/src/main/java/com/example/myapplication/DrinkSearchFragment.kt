@@ -17,6 +17,11 @@ class DrinkSearchFragment : Fragment() {
             val i = Intent(activity?.applicationContext, DrinksViewActivity::class.java)
             startActivity(i)
         }
+        val wineBut: Button = view.findViewById(R.id.wineBut)
+        wineBut.setOnClickListener {
+            val i = Intent(activity?.applicationContext, WineViewActivity::class.java)
+            startActivity(i)
+        }
         return view
     }
 }
