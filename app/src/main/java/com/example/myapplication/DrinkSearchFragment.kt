@@ -41,6 +41,11 @@ class DrinkSearchFragment : Fragment() {
             val i = Intent(activity?.applicationContext, WhiskeyViewActivity::class.java)
             startActivity(i)
         }
+        val wineBut: Button = view.findViewById(R.id.wineBut)
+        wineBut.setOnClickListener {
+            val i = Intent(activity?.applicationContext, WineViewActivity::class.java)
+            startActivity(i)
+        }
         //This is obly for view so that we do not need all data view
 //        val allBut: Button = view.findViewById(R.id.allBut)
 //        allBut.setOnClickListener {
