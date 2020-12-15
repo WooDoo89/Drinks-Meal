@@ -48,7 +48,7 @@ class RegistrationValidator {
     @Test
     fun checkIfUsernameExists2_When_Username_Not_Exist(){
         userdata()
-        assertEquals(user, test.checkIfUsernameExists2("John", Alluser ))
+        assertEquals(user, test.checkIfUsernameExists2("Andrew", Alluser ))
     }
     @Test
     fun checkIfPasswordExists_When_Password_Is_Correct(){
@@ -77,13 +77,8 @@ class RegistrationValidator {
         assertEquals(true, test.checkIfPhoneExists("37015236852", Alluser ))
     }
     @Test
-    fun Check_If_hashing_working_Ok(){
+    fun check_If_hashing_working_Ok(){
         assertEquals("ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb", test.hash("a" ))
     }
-
-//    @Test
-//    fun checkIfPhoneIsValidate_Test(){
-//        assertEquals(true, test.checkIfPhoneIsValidate("37054826983"))
-//    }
 
 }

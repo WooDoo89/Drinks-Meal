@@ -37,11 +37,11 @@ class ProfileFragment : Fragment() {
         val emailView: TextView = view.findViewById(R.id.userEmail)
         emailView.text = mainUser.Email
 
-//        val updateBut: Button = view.findViewById(R.id.update)
-//        updateBut.setOnClickListener {
-//            val i = Intent(activity?.applicationContext, WhiskeyViewActivity::class.java)
-//            startActivity(i)
-//        }
+        val updateBut: Button = view.findViewById(R.id.update)
+        updateBut.setOnClickListener {
+            val name: TextView = view.findViewById(R.id.name5)
+            name.text = "Sorry, but this feature does not work yet"
+        }
         return view
     }
 }

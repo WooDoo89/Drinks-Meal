@@ -2,9 +2,7 @@ package com.example.myapplication
 
 import android.telephony.PhoneNumberUtils
 import android.util.Log
-import android.widget.EditText
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.auth.User
 import java.security.MessageDigest
 
 
@@ -30,7 +28,7 @@ class UserDB {
             if (item.Username == usernameInput)
                 return item
         }
-        return allUsers[0]
+        return UserData()
     }
     fun checkIfPasswordExists(password: String, allUsers: ArrayList<UserData>) : Boolean{
         for(item in allUsers){

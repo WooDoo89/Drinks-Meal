@@ -25,6 +25,6 @@
     <string name="title_activity_main_menu">MainMenuActivity</string>
     <string name="tab_text_1">Profile</string>
     <string name="tab_text_2">Drink to Meal</string>
-    <string name="tab_text_3">Search Drink</string>
+    <string name="tab_text_3">Drink Information</string>
     <string name="tab_text_4">Info</string>
 </resources>

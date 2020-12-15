@@ -35,12 +35,7 @@ class UserData {
         return BD
     }
     fun updateUser(){
-        val db = FirebaseFirestore.getInstance()
-        db.collection("User").document("frank")
-            .update(mapOf(
-                "age" to 13,
-                "favorites.color" to "Red"
-            ))
+
     }
     fun getUser(username: String): UserData{
         val BD = UserData()
